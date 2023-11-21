@@ -23,15 +23,27 @@ public class Multiple {
 		}else {
 			if(inputInt % 2 == 0) {
 				result = result + "2";
+			}else {
+				if (inputInt % 3 == 0) {
+					result = result + ", 3";
+				}else {
+					if(inputInt % 5 == 0) {
+						result = result + ", 5 배수입니다.";
+					}
+				}
 			}
 			if(inputInt % 3 == 0) {
 				result = result + "3";
+			} else {
+				if(inputInt % 5 == 0) {
+					result = result + ", 5";
+				}
 			}
 			if(inputInt % 5 == 0) {
 				result = result + "5";
 			}
 			
-			result = "의 배수입니다.";
+			result = result + "의 배수입니다.";
 		}
 		
 		System.out.println(result);
