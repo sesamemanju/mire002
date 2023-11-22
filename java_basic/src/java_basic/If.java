@@ -26,6 +26,8 @@ public class If {
 			juge = '짝';
 		}
 		
+		
+		
 		System.out.println("입력한 숫자"+integer+"는 "+juge+"수 입니다.");
 		
 		
