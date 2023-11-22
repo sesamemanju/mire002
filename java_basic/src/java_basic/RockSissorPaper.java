@@ -35,20 +35,43 @@ public class RockSissorPaper {
 				judge = "이겼습니다.";
 			}
 		}
-		if(my_rsp_num == 0) {
+//		if(my_rsp_num == 0) {
+//			my_rsp = "가위";
+//		}else if(my_rsp_num == 1) {
+//				my_rsp = "바위";
+//			}else {
+//				my_rsp = "보";
+//			}
+//		if(com_rsp_num == 0) {
+//			com_rsp = "가위";
+//		}else if(com_rsp_num == 1) {
+//				com_rsp = "바위";
+//			}else {
+//				com_rsp = "보";
+//			}
+		
+		switch (my_rsp_num) {
+		case 0:
 			my_rsp = "가위";
-		}else if(my_rsp_num == 1) {
-				my_rsp = "바위";
-			}else {
-				my_rsp = "보";
-			}
-		if(com_rsp_num == 0) {
+		break;
+		case 1:
+			my_rsp = "바위";
+		break;
+		case 2:
+			my_rsp = "보";
+			break;
+		}
+		switch (com_rsp_num) {
+		case 0:
 			com_rsp = "가위";
-		}else if(com_rsp_num == 1) {
-				com_rsp = "바위";
-			}else {
-				com_rsp = "보";
-			}
+		break;
+		case 1:
+			com_rsp = "바위";
+		break;
+		case 2:
+			com_rsp = "보";
+			break;
+		}
 		
 		//출력
 		System.out.println("컴퓨터 : "+com_rsp);
