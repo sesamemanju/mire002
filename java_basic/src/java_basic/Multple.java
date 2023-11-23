@@ -13,7 +13,7 @@ public class Multple {
 //			}
 
 //		int dan = 2;
-//		String result = "";
+		String result = "";
 //		for(int gop=1;gop<10;gop++) {
 //			result = result+(dan + "*" + gop + " = " + (dan*gop)+"\n");
 			
