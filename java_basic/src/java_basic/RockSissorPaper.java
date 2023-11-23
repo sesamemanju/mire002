@@ -27,7 +27,7 @@ public class RockSissorPaper {
 
 			Scanner scanner = new Scanner(System.in);
 			while (true) {
-				menu = scanner.nextInt();scanner.nextLine();
+				menu = scanner.nextInt(); scanner.nextLine();
 
 				if (menu < 1 || menu > 3) {
 					System.out.println("입력이 올바르지 않습니다.");
