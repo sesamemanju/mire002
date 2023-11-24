@@ -23,7 +23,7 @@ public class HW1123 {
 		scann.nextLine();
 		lottoCnt = inMoney / PRICE_PER_LOTTO; // 나눈 몫
 		changeMoney = inMoney % PRICE_PER_LOTTO; // 나머지
-		output_num = new int[lottoCnt][6];
+		output_num = new int[lottoCnt][6]; //숫자뽑기 초기화
 
 		// 처리
 		for (int i = 1; i < 46; i++) {
@@ -48,11 +48,11 @@ public class HW1123 {
 				System.out.print(output_num[i][j] + "\t");
 			}
 
-			System.out.println();
+			System.out.println(); //
 
 		}
 
-		System.out.println("거스름 돈 : " + changeMoney);
+		System.out.println("거스름 돈 : " + changeMoney); //거스름돈 출력
 
 	}
 
