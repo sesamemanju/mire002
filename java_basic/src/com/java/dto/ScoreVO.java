@@ -41,7 +41,7 @@ public class ScoreVO {
 		scann.nextLine();
 	}
 
-	//가진것만 표현하기때문에 순번 없음.
+	//가진것만 표현하기때문에 순번 없음. 값이 변하지 않으므로 static을 사용함.
 	public static void printLabel() {
 		System.out.println("이름\t국어\t영어\t수학\t과학\t총점\t평균");
 	}
