@@ -6,6 +6,7 @@ import com.java.dto.CircleVO;
 import com.java.dto.RectangleVO;
 import com.java.dto.Shape;
 import com.java.dto.TriangleVO;
+import com.java.solution.SurfaceSolution;
 
 public class PolyMain {
 	
@@ -15,18 +16,10 @@ public class PolyMain {
 	public int menu;
 
 	public static void main(String[] args) {
+		SurfaceSolution main = new SurfaceSolution();
 		
+		main.start();
 		
-		
-		PolyMain main = new PolyMain();
-		
-		do {
-			main.input();	
-			
-			main.process();
-			
-			main.output();
-		} while(true);
 	}
 
 	public void input() {

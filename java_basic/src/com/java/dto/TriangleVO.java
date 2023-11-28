@@ -1,5 +1,7 @@
 package com.java.dto;
 
+import java.util.Scanner;
+
 public class TriangleVO extends Shape{
 
 	public int height; // ≥Ù¿Ã
@@ -44,6 +46,25 @@ public class TriangleVO extends Shape{
 
 	public void setBaseline(int baseline) {
 		this.baseline = baseline;
+	}
+
+	@Override
+	public void inputData() {
+		Scanner scann = new Scanner(System.in);
+		
+		System.out.print("πÿ∫Ø : ");
+		this.baseline = scann.nextInt();
+		scann.nextLine();
+		System.out.print("≥Ù¿Ã : ");
+		this.height = scann.nextInt();
+		scann.nextLine();
+		
+	}
+
+	@Override
+	public String outputMessage() {
+		return "ªÔ∞¢«¸ ≥–¿Ã";
+		
 	}
 	
 	
