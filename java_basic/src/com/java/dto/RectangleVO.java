@@ -1,8 +1,8 @@
 package com.java.dto;
 
-public class RectangleVO {
+public class RectangleVO extends Shape {
 
-	public int base; // πÿ∫Ø
+	public int baseline; // πÿ∫Ø
 	public int height; // ≥Ù¿Ã
 //	public float width;// ≥–¿Ã
 
@@ -11,13 +11,29 @@ public class RectangleVO {
 	public RectangleVO() {
 	}
 
-	public RectangleVO(int base, int height) {
-		this.base = base;
+	public RectangleVO(int baseline, int height) {
+		this.baseline = baseline;
+		this.height = height;
+	}
+	@Override
+	public int surface() {
+		return (int) (baseline * height);
+	}
+
+	public int getBaseline() {
+		return baseline;
+	}
+
+	public void setBaseline(int baseline) {
+		this.baseline = baseline;
+	}
+
+	public int getHeight() {
+		return height;
+	}
+
+	public void setHeight(int height) {
 		this.height = height;
 	}
 
-	public int surface() {
-		return (int)(base * height);
-	}
-	
 }

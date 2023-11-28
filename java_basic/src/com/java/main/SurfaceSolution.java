@@ -7,16 +7,13 @@ import com.java.dto.RectangleVO;
 import com.java.dto.Shape;
 import com.java.dto.TriangleVO;
 
-public class PolyMain {
+
+public class SurfaceSolution {
 	
-	public TriangleVO triangle;
-	public RectangleVO rectangle;
-	public CircleVO circle;
-	public int menu;
+	private Shape s;
+	private int menu;
 
 	public static void main(String[] args) {
-		
-		
 		
 		PolyMain main = new PolyMain();
 		
@@ -37,23 +34,31 @@ public class PolyMain {
 		
 		switch(menu) {
 		case 1: //삼각형
-			triangle = new TriangleVO();
+			s = new TriangleVO();
+			TriangleVO t = (TriangleVO)s;
 			System.out.print("밑변 : ");
-			triangle.baseline = scann.nextInt(); scann.nextLine();
+			t.setBaseline(scann.nextInt());
+			scann.nextLine();
 			System.out.print("높이 : ");
-			triangle.height = scann.nextInt(); scann.nextLine();
+			t.setHeight(scann.nextInt());
+			scann.nextLine();
 			break;
 		case 2: //사각형
-			rectangle = new RectangleVO();
+			s = new RectangleVO();
+			RectangleVO r =(RectangleVO)s;
 			System.out.print("가로 : ");
-			rectangle.baseline = scann.nextInt(); scann.nextLine();
+			r.setBaseline(scann.nextInt());
+			scann.nextLine();
 			System.out.print("세로 : ");
-			rectangle.height = scann.nextInt(); scann.nextLine();
+			r.setHeight(scann.nextInt());
+			scann.nextLine();
 			break;
 		case 3: //원
-			circle = new CircleVO();
+			s = new CircleVO();
+			CircleVO c = (CircleVO)s;
 			System.out.print("반지름 : ");
-			circle.radius = scann.nextInt(); scann.nextLine();
+			c.setRadius(scann.nextInt());
+			scann.nextLine();
 			break;
 		default: 
 			System.out.println("입력이 올바르지 않습니다.");
@@ -73,15 +78,18 @@ public class PolyMain {
 	public void output() {
 		switch(menu) {
 		case 1:
-			System.out.println("삼각형 넓이 : " + triangle.surface());
+			System.out.println("삼각형 넓이 : ");
 			break;
 		case 2:
-			System.out.println("사각형 넓이 : "+ rectangle.surface());
+			System.out.println("사각형 넓이 : ");
 			break;
 		case 3:
-			System.out.println("원 넓이 : "+ circle.surface());
+			System.out.println("원 넓이 : ");
 			break;
 		}
+		
+		System.out.print(s.surface());
+		
 		System.out.println("종료(Q)혹은 계속하시려면 아무키나 누르시오.");
 		String menu = new Scanner(System.in).nextLine();
 		if(menu.toUpperCase().equals("Q")) {
@@ -90,3 +98,5 @@ public class PolyMain {
 	}
 	
 }
+
+
